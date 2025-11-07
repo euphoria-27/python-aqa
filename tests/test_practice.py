@@ -6,3 +6,8 @@ def test_simple_button_click(driver):
     practice.open_simple_button()
     practice.click_simple_button()
     practice.check_submitted_text()
+
+def test_checkboxes(driver):
+    test = QaPractice(driver)
+    test.open_mult_checkbox()
+    test.click_mult_checkbox("Two")
