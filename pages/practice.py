@@ -34,7 +34,7 @@ class QaPractice:
         label = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, f'//label[@class="form-check-label" and contains(text(), "{checkbox}")]'))
         )
-        label.click()
+        self.driver.execute_script("arguments[0].click();", label)
 
         chb = self.driver.find_element(By.ID, label.get_attribute('for'))
         
